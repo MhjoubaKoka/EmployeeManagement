@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale:1.0">
+	<title>Login </title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="main">
+		<div class="card">
+			<div class="card-title">
+				<h3><i class="fa fa-user-circle-o" aria-hidden="true"></i> User <span id="action_title">Login</span></h3>
+			</div>
+			<div class="card-body">
+				
+				<div class="card-body-login">
+					<form id="login-form">
+						<input class="input-form" type="text"[(ngModel)]="currentuser.userName" placeholder=" UserName" name="UserName" required ><br><br>
+						<input class="input-form" type="password"[(ngModel)]="currentuser.password" placeholder="Password" name="password" required ><br><br>
+						<input class="submit-form" (click)="login()"  type="submit" value="Login">
+
+					</form>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

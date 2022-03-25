@@ -1,0 +1,12 @@
+<nav>
+    <div class="logo">
+        <p>navbar</p>
+    </div>
+    <ul>
+        <li><a routerLink="home" routerLinkActive="active" class="active">home</a></li>
+        <li><a routerLink="about" routerLinkActive="active">about</a></li>
+        <li><a routerLink="/register" routerLinkActive="active">register</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">login</a></li>
+        <li><a (click)="logOut()" routerLinkActive="active">logout</a></li>
+    </ul>
+</nav>
