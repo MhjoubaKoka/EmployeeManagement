@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Role } from 'src/app/model/role';
 import { User } from 'src/app/model/user';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -10,15 +11,16 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class RegisterComponent implements OnInit {
   newUser:User=new User();
-  constructor(private authService:AuthService) { }
+  constructor(private authService:AuthService,private router:Router) { }
 
   roles:Role[]=[];
   ngOnInit(): void {
   }
 
   addUsers(){
-    console.log(this.newUser.firstName)    
     this.authService.SignUp(this.newUser).subscribe();
+    this.router.navigate(['/login'])  
+
   }
 
 }
