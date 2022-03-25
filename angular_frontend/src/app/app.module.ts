@@ -15,6 +15,7 @@ import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './component/register/register.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { AdminComponent } from './component/admin/admin.component';
 
 
 
@@ -32,6 +33,7 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     RegisterComponent,
     HomeComponent,
     NavbarComponent,
+    AdminComponent,
     ],
   imports: [
     BrowserModule,

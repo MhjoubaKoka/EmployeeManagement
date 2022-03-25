@@ -8,12 +8,10 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class FooterComponent implements OnInit {
 
-  isLoggedIn = false;      
 
   constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
-    this.isLoggedIn = this.authService.IsLoggedIn();
 
   }
 

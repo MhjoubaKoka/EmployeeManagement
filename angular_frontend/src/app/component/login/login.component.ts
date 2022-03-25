@@ -23,11 +23,11 @@ export class LoginComponent implements OnInit {
        this.responseData=result;
        localStorage.setItem('token',this.responseData.jwtToken);
        localStorage.setItem("roles",JSON.stringify(this.responseData.user.roles));
-       if(this.responseData.user.roles[0].roleName=="Admin"){
-         this.router.navigate(['/admin'])  
+       if(this.responseData.user.roles[0].roleName=="user"){
+         this.router.navigate(['/employees'])  
        }else{
          
-         this.router.navigate(['/user'])
+         this.router.navigate(['/admin'])
        }
       
       }
